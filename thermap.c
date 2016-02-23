@@ -23,6 +23,12 @@ BOOL thermap_check_table(thermap_table_t *pTable)
 }
 
 /* see header */
+unsigned int thermap_get_table_length(thermap_table_t *pTable)
+{
+  return pTable->length;
+}
+
+/* see header */
 thermapTemp thermap_get_temp(thermapR r, thermap_table_t *pTable)
 {
 

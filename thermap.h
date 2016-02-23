@@ -15,8 +15,8 @@ extern "C" {
 /*
  * types
  */
-typedef int thermapTemp;
-typedef unsigned int thermapR;
+typedef long thermapTemp;
+typedef unsigned long thermapR;
 typedef struct
 {
   thermapTemp temp;       // temperature
@@ -25,7 +25,7 @@ typedef struct
 
 typedef struct
 {
-  thermap_elt_t *table;
+  const thermap_elt_t *table;
   unsigned int length;
 }thermap_table_t;
 
@@ -57,6 +57,11 @@ typedef struct
  * Returns TRUE if it is consistent, FALSE otherwise
  */
 BOOL thermap_check_table(thermap_table_t *pTable);
+
+/*
+ * Returns the table length
+ */
+unsigned int thermap_get_table_length(thermap_table_t *pTable);
 
 /*
  * This function takes a measured resistance as input and returns
