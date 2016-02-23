@@ -4,6 +4,11 @@
  * author: dannyno 2016
  *
  */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef THERMAP_H_
 #define THERMAP_H_
 
@@ -60,3 +65,7 @@ BOOL thermap_check_table(thermap_table_t *pTable);
 thermapTemp thermap_get_temp(thermapR r, thermap_table_t *pTable);
 
 #endif /* THERMAP_H_ */
+
+#ifdef __cplusplus
+}
+#endif
